@@ -1,0 +1,18 @@
+version: "3"
+services:
+  #dev container
+  dev_app:
+    container_name: dev-container
+    build: .
+    volumes:
+      - ./src/:/app/src:ro
+    environment:
+      - NODE_ENV=Development    
+
+  #prod contaier    
+  prod_app:
+    container_name: prod-container
+    build: .
+    environment:
+      - NODE_ENV=production
+
