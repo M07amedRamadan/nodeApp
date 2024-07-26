@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - prod_branch
+  workflow_dispatch:
 
 jobs:
   prod-deploy:
