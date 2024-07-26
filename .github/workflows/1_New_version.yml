@@ -24,7 +24,7 @@ on:
         description: 'Which environment you want to deploy, default Trial and Production'
         required: true
         type: choice
-        default: 'Both'
+        #default: 'Both'
         options:
         - Both 
         - Production_Only
