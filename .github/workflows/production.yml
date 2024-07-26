@@ -1,10 +1,10 @@
 name: Deploy Production
 
 on:
+  workflow_dispatch:
   push:
     branches:
     - prod_branch
-  workflow_dispatch:
 jobs:
   prod-deploy:
     runs-on: ubuntu-latest
@@ -17,6 +17,4 @@ jobs:
 
     - name: Production
       run: |
-        echo "Production"
-
-   
+        echo "Production"   
