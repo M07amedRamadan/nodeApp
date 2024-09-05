@@ -2,9 +2,9 @@ name: Deploy Trial
 
 on:
   workflow_dispatch:
-  # push:
-  #   branches:
-  #   - main
+  push:
+    branches:
+    - main
 jobs:
   prod-deploy:
     runs-on: self-hosted
@@ -17,6 +17,6 @@ jobs:
     - name: Trial
       run: |
         echo "Trial"
-        sleep 1500
+        sleep 3600
 
    
