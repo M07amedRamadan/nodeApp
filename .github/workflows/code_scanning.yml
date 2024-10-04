@@ -1,0 +1,21 @@
+name: "CodeQL Analysis for JavaScript"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    name: Analyze JavaScript
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: javascript  # Only scanning for JavaScript
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
